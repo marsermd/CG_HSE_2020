@@ -7,7 +7,7 @@
 5. Send me a screenshot of your results at mischapanin@gmail.com along with your code (best as a link to a file in your repository, but pastebin will work).
 6. The e-mail should have the following topic: __HSE.CG.<your_name>.<your_last_name>.HW2__
 
-Bonus points:
+### Bonus points:
 You can get an extra 20% bonus if you generate the vertices on GPU using a compute shader.
 An example of a compute shader can be found [here](https://www.reddit.com/r/Unity3D/comments/7pa6bq/drawing_mandelbrot_fractal_using_gpu_compute/).    
 A small tip: it would probably be convenient to output the results as an [AppendStruturedBuffer](https://docs.unity3d.com/ScriptReference/ComputeBufferType.Append.html) of triangle structs.    
