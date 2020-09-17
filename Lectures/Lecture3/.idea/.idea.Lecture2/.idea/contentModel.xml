@@ -14,7 +14,9 @@
         </e>
         <e p="Scripts" t="Include">
           <e p="MarchingCubes.Tables.cs" t="Include" />
+          <e p="MarchingCubesGenerator.cs" t="Include" />
           <e p="MeshGenerator.cs" t="Include" />
+          <e p="MetaBallField.cs" t="Include" />
           <e p="SimpleProjectionShader.shader" t="Include" />
         </e>
       </e>

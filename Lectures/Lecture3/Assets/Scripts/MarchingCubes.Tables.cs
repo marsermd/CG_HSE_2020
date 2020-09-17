@@ -1,4 +1,5 @@
 ﻿using Unity.Mathematics;
+using UnityEngine;
 
 public class MarchingCubes
 {
@@ -13,6 +14,40 @@ public class MarchingCubes
     /// </summary>
     public class Tables
     {
+        /// <summary>
+        /// Positions of vertices of a single cube.
+        /// </summary>
+        public static Vector3[] _cubeVertices = new Vector3[]
+        {
+            new Vector3(0, 0, 0), // 0
+            new Vector3(0, 1, 0), // 1
+            new Vector3(1, 1, 0), // 2
+            new Vector3(1, 0, 0), // 3
+            new Vector3(0, 0, 1), // 4
+            new Vector3(0, 1, 1), // 5
+            new Vector3(1, 1, 1), // 6
+            new Vector3(1, 0, 1), // 7
+        };
+        
+        /// <summary>
+        /// Indices of vertices for a given edge
+        /// </summary>
+        public static readonly int[][] _cubeEdges = new int[][]
+        {
+            new int[] {0, 1}, // 0
+            new int[] {1, 2}, // 1
+            new int[] {2, 3}, // 2
+            new int[] {3, 0}, // 3
+            new int[] {4, 5}, // 4
+            new int[] {5, 6}, // 5
+            new int[] {6, 7}, // 6
+            new int[] {7, 4}, // 7
+            new int[] {0, 4}, // 8
+            new int[] {1, 5}, // 9
+            new int[] {2, 6}, // 10
+            new int[] {3, 7}, // 11
+        };
+        
         /// <summary>
         /// How many triangles should be there in a cube for a given CaseIndex?
         /// </summary>

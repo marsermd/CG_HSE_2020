@@ -1,20 +1,31 @@
-using System;
 using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(MeshFilter))]
 public class MeshGenerator : MonoBehaviour
 {
+    public MetaBallField Field = new MetaBallField();
+    public MarchingCubesGenerator Generator = new MarchingCubesGenerator();
+    
     private MeshFilter _filter;
     private Mesh _mesh;
+    
+    private List<Vector3> vertices = new List<Vector3>();
+    private List<Vector3> normals = new List<Vector3>();
+    private List<int> indices = new List<int>();
 
     /// <summary>
     /// Executed by Unity upon object initialization. <see cref="https://docs.unity3d.com/Manual/ExecutionOrder.html"/>
     /// </summary>
     private void Awake()
     {
+        // Getting a component, responsible for storing the mesh
         _filter = GetComponent<MeshFilter>();
+        
+        // instantiating the mesh
         _mesh = _filter.mesh = new Mesh();
+        
+        // Just a little optimization, telling unity that the mesh is going to be updated frequently
         _mesh.MarkDynamic();
     }
 
@@ -24,7 +35,7 @@ public class MeshGenerator : MonoBehaviour
     /// </summary>
     private void Update()
     {
-        List<Vector3> sourceVertices = new List<Vector3>
+        List<Vector3> cubeVertices = new List<Vector3>
         {
             new Vector3(0, 0, 0), // 0
             new Vector3(0, 1, 0), // 1
@@ -46,15 +57,22 @@ public class MeshGenerator : MonoBehaviour
             1, 5, 6, 6, 2, 1, // top
         };
 
-        List<Vector3> vertices = new List<Vector3>();
-        List<int> triangles = new List<int>();
+        
+        vertices.Clear();
+        indices.Clear();
+        normals.Clear();
+        
+        Field.Update();
+        // ----------------------------------------------------------------
+        // Generate mesh here. Below is a sample code of a cube generation.
+        // ----------------------------------------------------------------
 
         // What is going to happen if we don't split the vertices? Check it out by yourself by passing
         // sourceVertices and sourceTriangles to the mesh.
         for (int i = 0; i < sourceTriangles.Length; i++)
         {
-            triangles.Add(vertices.Count);
-            Vector3 vertexPos = sourceVertices[sourceTriangles[i]];
+            indices.Add(vertices.Count);
+            Vector3 vertexPos = cubeVertices[sourceTriangles[i]];
             
             //Uncomment for some animation:
             //vertexPos += new Vector3
@@ -67,10 +85,11 @@ public class MeshGenerator : MonoBehaviour
             vertices.Add(vertexPos);
         }
 
-        // Here unity automatically assumes that vertices are points and hence will be represented as (x, y, z, 1) in homogenous coordinates
+        // Here unity automatically assumes that vertices are points and hence (x, y, z) will be represented as (x, y, z, 1) in homogenous coordinates
+        _mesh.Clear();
         _mesh.SetVertices(vertices);
-        _mesh.SetTriangles(triangles, 0);
-        _mesh.RecalculateNormals();
+        _mesh.SetTriangles(indices, 0);
+        _mesh.RecalculateNormals(); // Use _mesh.SetNormals(normals) instead when you calculate them
 
         // Upload mesh data to the GPU
         _mesh.UploadMeshData(false);
