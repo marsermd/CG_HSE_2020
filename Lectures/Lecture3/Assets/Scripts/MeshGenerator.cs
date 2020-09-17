@@ -5,7 +5,6 @@ using UnityEngine;
 public class MeshGenerator : MonoBehaviour
 {
     public MetaBallField Field = new MetaBallField();
-    public MarchingCubesGenerator Generator = new MarchingCubesGenerator();
     
     private MeshFilter _filter;
     private Mesh _mesh;
