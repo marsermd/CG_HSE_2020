@@ -35,4 +35,16 @@ public class MetaBallField
 
         return f - 1;
     }
+
+    public Bounds GetBounds()
+    {
+        Vector3 minBounds = Vector3.positiveInfinity;
+        Vector3 maxBounds = Vector3.negativeInfinity;
+        foreach (var center in _ballPositions)
+        {
+            minBounds = Vector3.Min(minBounds, center - Vector3.one * BallRadius);
+            maxBounds = Vector3.Max(maxBounds, center + Vector3.one * BallRadius);
+        }
+        return new Bounds((maxBounds + minBounds) / 2, maxBounds - minBounds);
+    }
 }

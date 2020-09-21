@@ -44,11 +44,12 @@ public class MeshGenerator : MonoBehaviour
         // Generate mesh here. Below is a sample code of a cube generation.
         // ----------------------------------------------------------------
 
-        for (float x = -4; x < 4; x += Step)
+        Bounds aabb = Field.GetBounds();
+        for (float x = aabb.min.x - 2 * Step; x <= aabb.max.x + Step; x += Step)
         {
-            for (float y = -4; y < 4; y += Step)
+            for (float y = aabb.min.y - 2 * Step; y <= aabb.max.y + Step; y += Step)
             {
-                for (float z = -4; z < 4; z += Step)
+                for (float z = aabb.min.z - 2 * Step; z <= aabb.max.z + Step; z += Step)
                 {
                     int mask = 0;
                     for (int i = 0; i < 8; ++i)
