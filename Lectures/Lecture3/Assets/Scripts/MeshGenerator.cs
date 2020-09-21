@@ -99,9 +99,9 @@ public class MeshGenerator : MonoBehaviour
                             Vector3 dz = Vector3.forward * Eps;
                             Vector3 n = new Vector3
                             (
-                                Field.F(v + dx) - Field.F(v - dx),
-                                Field.F(v + dy) - Field.F(v - dy),
-                                Field.F(v + dz) - Field.F(v - dz)
+                                Field.F(v - dx) - Field.F(v + dx),
+                                Field.F(v - dy) - Field.F(v + dy),
+                                Field.F(v - dz) - Field.F(v + dz)
                             ).normalized;
                             indices.Add(vertices.Count);
                             vertices.Add(v);
