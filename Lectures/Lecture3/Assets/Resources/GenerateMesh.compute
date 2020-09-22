@@ -1,0 +1,105 @@
+﻿#define STEP 0.1
+#define EPS 0.001
+
+#pragma kernel Generate
+
+struct Face
+{
+    float3 positions[3];
+    float3 normals[3];
+};
+
+struct CaseVertices
+{
+    int3 vertices[5];
+};
+
+AppendStructuredBuffer<Face> vertexBuffer;
+StructuredBuffer<float3> ballPositions;
+StructuredBuffer<float3> cubeVertices;
+StructuredBuffer<int2> cubeEdges;
+StructuredBuffer<int> caseToTrianglesCount;
+StructuredBuffer<CaseVertices> caseToVertices;
+
+int numBalls;
+float ballRadius;
+
+float F(float3 position)
+{
+    float f = 0;
+    for (int i = 0; i < numBalls; ++i)
+    {
+        float3 diff = ballPositions[i] - position;
+        f += 1 / dot(diff, diff);
+    }
+    f *= ballRadius * ballRadius;
+    return f - 1;
+
+}
+
+[numthreads(10,10,10)]
+void Generate (uint3 id : SV_DispatchThreadID)
+{
+    float x = -4 + id[0] * STEP;
+    float y = -4 + id[1] * STEP;
+    float z = -5 + id[2] * STEP;
+    int mask = 0;
+    for (int i = 0; i < 8; ++i)
+    {
+        float3 vertex = cubeVertices[i];
+        float3 pos = float3
+        (
+            x + vertex.x * STEP,
+            y + vertex.y * STEP,
+            z + vertex.z * STEP
+        );
+        float f = F(pos);
+        mask |= (f > 0 ? 1 : 0) << i;
+    }
+    int trianglesCount = caseToTrianglesCount[mask];
+    for (int j = 0; j < trianglesCount; ++j)
+    {
+        Face face;
+        int3 triangleEdges = caseToVertices[mask].vertices[j];
+        for (int e = 0; e < 3; ++e)
+        {
+            int2 edge = cubeEdges[triangleEdges[e]];
+            float3 vertex1 = cubeVertices[edge[0]];
+            float3 vertex2 = cubeVertices[edge[1]];
+            float3 a = float3
+            (
+                x + vertex1.x * STEP,
+                y + vertex1.y * STEP,
+                z + vertex1.z * STEP
+            );
+            float3 b = float3
+            (
+                x + vertex2.x * STEP,
+                y + vertex2.y * STEP,
+                z + vertex2.z * STEP
+            );
+            float fa = F(a);
+            float fb = F(b);
+            float t = -fb / (fa - fb);
+            float3 v = float3
+            (
+                a.x * t + b.x * (1 - t),
+                a.y * t + b.y * (1 - t),
+                a.z * t + b.z * (1 - t)
+            );
+            float3 dx = float3(EPS, 0, 0);
+            float3 dy = float3(0, EPS, 0);
+            float3 dz = float3(0, 0, EPS);
+            float3 n = float3
+            (
+                F(v - dx) - F(v + dx),
+                F(v - dy) - F(v + dy),
+                F(v - dz) - F(v + dz)
+            );
+            n = normalize(n);
+            face.positions[e] = v;
+            face.normals[e] = n;   
+        }
+        vertexBuffer.Append(face);
+    }
+}

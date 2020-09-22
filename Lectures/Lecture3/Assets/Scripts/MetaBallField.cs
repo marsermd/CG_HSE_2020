@@ -16,6 +16,14 @@ public class MetaBallField
     public void Update()
     {
         _ballPositions = Balls.Select(x => x.position).ToArray();
+        // _ballPositions[0].x += (float) Math.Sin(Time.time);
+        // _ballPositions[1].y += (float) Math.Cos(Time.time);
+        // _ballPositions[2].z += (float) Math.Sin(Time.time);
+    }
+    
+    public void UpdateBuffer(ComputeBuffer buffer)
+    {
+        buffer.SetData(_ballPositions);
     }
     
     /// <summary>
