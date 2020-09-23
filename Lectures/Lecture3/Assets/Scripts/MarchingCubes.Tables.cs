@@ -1,4 +1,4 @@
-﻿using Unity.Mathematics;
+﻿﻿using Unity.Mathematics;
 using UnityEngine;
 
 public class MarchingCubes
