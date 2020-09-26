@@ -1,5 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
+
 
 [RequireComponent(typeof(MeshFilter))]
 public class MeshGenerator : MonoBehaviour
@@ -33,30 +35,7 @@ public class MeshGenerator : MonoBehaviour
     /// You can use it to animate something in runtime.
     /// </summary>
     private void Update()
-    {
-        List<Vector3> cubeVertices = new List<Vector3>
-        {
-            new Vector3(0, 0, 0), // 0
-            new Vector3(0, 1, 0), // 1
-            new Vector3(1, 1, 0), // 2
-            new Vector3(1, 0, 0), // 3
-            new Vector3(0, 0, 1), // 4
-            new Vector3(0, 1, 1), // 5
-            new Vector3(1, 1, 1), // 6
-            new Vector3(1, 0, 1), // 7
-        };
-
-        int[] sourceTriangles =
-        {
-            0, 1, 2, 2, 3, 0, // front
-            3, 2, 6, 6, 7, 3, // right
-            7, 6, 5, 5, 4, 7, // back
-            0, 4, 5, 5, 1, 0, // left
-            0, 3, 7, 7, 4, 0, // bottom
-            1, 5, 6, 6, 2, 1, // top
-        };
-
-        
+    {   
         vertices.Clear();
         indices.Clear();
         normals.Clear();
@@ -68,29 +47,78 @@ public class MeshGenerator : MonoBehaviour
 
         // What is going to happen if we don't split the vertices? Check it out by yourself by passing
         // sourceVertices and sourceTriangles to the mesh.
-        for (int i = 0; i < sourceTriangles.Length; i++)
-        {
-            indices.Add(vertices.Count);
-            Vector3 vertexPos = cubeVertices[sourceTriangles[i]];
-            
-            //Uncomment for some animation:
-            //vertexPos += new Vector3
-            //(
-            //    Mathf.Sin(Time.time + vertexPos.z),
-            //    Mathf.Sin(Time.time + vertexPos.y),
-            //    Mathf.Sin(Time.time + vertexPos.x)
-            //);
-            
-            vertices.Add(vertexPos);
+        float size = 0.2f;
+
+        for (int x = 0; x < (Field.MaxX() - Field.MinX()) / size; x++) {
+            for (int y = 0; y < (Field.MaxY() - Field.MinY()) / size; y++) {
+                for (int z = 0; z < (Field.MaxZ() - Field.MinZ()) / size; z++) {
+                    var x0 = Field.MinX() + x * size;
+                    var x1 = Field.MinX() + (x + 1) * size;
+                    var y0 = Field.MinY() + y * size;
+                    var y1 = Field.MinY() + (y + 1) * size;
+                    var z0 = Field.MinZ() + z * size;
+                    var z1 = Field.MinZ() + (z + 1) * size;
+                    var cube = new List<Vector3> {
+                        new Vector3(x0, y0, z0),
+                        new Vector3(x0, y1, z0),
+                        new Vector3(x1, y1, z0),
+                        new Vector3(x1, y0, z0),
+                        new Vector3(x0, y0, z1),
+                        new Vector3(x0, y1, z1),
+                        new Vector3(x1, y1, z1),
+                        new Vector3(x1, y0, z1)
+                    };
+                    go(cube);
+                }
+            }
         }
 
         // Here unity automatically assumes that vertices are points and hence (x, y, z) will be represented as (x, y, z, 1) in homogenous coordinates
         _mesh.Clear();
         _mesh.SetVertices(vertices);
         _mesh.SetTriangles(indices, 0);
-        _mesh.RecalculateNormals(); // Use _mesh.SetNormals(normals) instead when you calculate them
+        _mesh.SetNormals(normals); // Use _mesh.SetNormals(normals) instead when you calculate them
 
         // Upload mesh data to the GPU
         _mesh.UploadMeshData(false);
+    }
+
+    private void go(List<Vector3> cube) {
+        var mask = getMask(cube);
+
+        for (int i = 0; i < MarchingCubes.Tables.CaseToTrianglesCount[mask]; i++) {
+            var t = MarchingCubes.Tables.CaseToVertices[mask][i];
+            var edges = new List<int>{t.x, t.y, t.z};
+            for (int e = 0; e < 3; e++) {
+                var a = cube[MarchingCubes.Tables._cubeEdges[edges[e]][0]];
+                var b = cube[MarchingCubes.Tables._cubeEdges[edges[e]][1]];
+                var p = Field.F(b) / (Field.F(b) - Field.F(a));
+                var point = a * p + b * (1 - p);
+
+                indices.Add(vertices.Count);
+                vertices.Add(point);
+                addNormal(point);
+            }
+        }
+    }
+
+    private int getMask(List<Vector3> cube) {
+        var mask = 0;
+        var fValues = cube.Select(vertex => Field.F(vertex)).ToList();
+        for (var i = 0; i < fValues.Count; i++) {
+            var flag = fValues[i] > 0 ? 1 : 0;
+            mask |= flag << i;
+        }
+        return mask;
+    }
+
+    private void addNormal(Vector3 point) {
+        float eps = 0.001f;
+        var dx = new Vector3(eps, 0, 0);
+        var dy = new Vector3(0, eps, 0);
+        var dz = new Vector3(0, 0, eps);
+        normals.Add(new Vector3(Field.F(point - dx) - Field.F(point + dx),
+            Field.F(point - dy) - Field.F(point + dy),
+            Field.F(point - dz) - Field.F(point + dz)));
     }
 }

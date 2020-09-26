@@ -35,4 +35,11 @@ public class MetaBallField
 
         return f - 1;
     }
+
+    public float MinX() => _ballPositions.Min(position => position.x) - 2 * BallRadius;
+    public float MaxX() => _ballPositions.Max(position => position.x) + 2 * BallRadius;
+    public float MinY() => _ballPositions.Min(position => position.y) - 2 * BallRadius;
+    public float MaxY() => _ballPositions.Max(position => position.y) + 2 * BallRadius;
+    public float MinZ() => _ballPositions.Min(position => position.z) - 2 * BallRadius;
+    public float MaxZ() => _ballPositions.Max(position => position.z) + 2 * BallRadius;
 }
