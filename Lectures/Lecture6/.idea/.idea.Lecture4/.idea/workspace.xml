@@ -1,0 +1,537 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="9529ee47-ddf7-42cf-bf83-cb621d4ba29b" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../Lecture1/.idea/.idea.Lecture1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Lecture1/.idea/.idea.Lecture1/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lecture2/.idea/.idea.Lecture2/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Lecture2/.idea/.idea.Lecture2/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lecture2/.idea/.idea.Lecture2/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Lecture2/.idea/.idea.Lecture2/.idea/indexLayout.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lecture2/.idea/.idea.Lecture2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Lecture2/.idea/.idea.Lecture2/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Lecture4/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Lecture4/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Lecture4/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Lecture4/.idea/indexLayout.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Lecture4/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Lecture4/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CubemapToSphericalHarmonic.compute" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CubemapToSphericalHarmonic.compute" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shaders/Cubemap.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shaders/Cubemap.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shaders/SH.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shaders/SH.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/Shaders/Unlit.shader">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="300">
+              <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
+              <folding>
+                <marker date="1570044818391" expanded="true" signature="24:867" ph="{...}" />
+                <marker date="1570044818391" expanded="true" signature="45:103" ph="{...}" />
+                <marker date="1570044818391" expanded="true" signature="122:865" ph="{...}" />
+                <marker date="1570044818391" expanded="true" signature="201:859" ph="{...}" />
+                <marker date="1570044818391" expanded="true" signature="224:844" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/Shaders/Diffuse.shader">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="231">
+              <caret line="31" selection-start-line="31" selection-end-line="31" />
+              <folding>
+                <marker date="1570050707453" expanded="true" signature="26:1240" ph="{...}" />
+                <marker date="1570050707453" expanded="true" signature="47:105" ph="{...}" />
+                <marker date="1570050707453" expanded="true" signature="124:1238" ph="{...}" />
+                <marker date="1570050707453" expanded="true" signature="203:1232" ph="{...}" />
+                <marker date="1570050707453" expanded="true" signature="226:1217" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/Shaders/Diffuse+Ambient.shader">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="735">
+              <caret line="49" column="57" selection-start-line="49" selection-start-column="57" selection-end-line="49" selection-end-column="57" />
+              <folding>
+                <marker date="1570050742381" expanded="true" signature="34:1366" ph="{...}" />
+                <marker date="1570050742381" expanded="true" signature="55:175" ph="{...}" />
+                <marker date="1570050742381" expanded="true" signature="194:1364" ph="{...}" />
+                <marker date="1570050742381" expanded="true" signature="273:1358" ph="{...}" />
+                <marker date="1570050742381" expanded="true" signature="296:1343" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/Shaders/Specular.shader">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="870">
+              <caret line="58" column="91" selection-start-line="58" selection-start-column="91" selection-end-line="58" selection-end-column="91" />
+              <folding>
+                <marker date="1570050774470" expanded="true" signature="27:1873" ph="{...}" />
+                <marker date="1570050774470" expanded="true" signature="48:212" ph="{...}" />
+                <marker date="1570050774470" expanded="true" signature="231:1871" ph="{...}" />
+                <marker date="1570050774470" expanded="true" signature="310:1865" ph="{...}" />
+                <marker date="1570050774470" expanded="true" signature="333:1850" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/Shaders/Cubemap.shader">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-81">
+              <caret line="84" column="16" selection-start-line="84" selection-start-column="16" selection-end-line="84" selection-end-column="16" />
+              <folding>
+                <marker date="1571431762477" expanded="true" signature="26:3884" ph="{...}" />
+                <marker date="1571431762477" expanded="true" signature="47:248" ph="{...}" />
+                <marker date="1571431762477" expanded="true" signature="267:3882" ph="{...}" />
+                <marker date="1571431762477" expanded="true" signature="346:3876" ph="{...}" />
+                <marker date="1571431762477" expanded="true" signature="369:3861" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Assets/Shaders/SH.shader">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="72" column="41" selection-start-line="72" selection-start-column="41" selection-end-line="72" selection-end-column="41" />
+              <folding>
+                <marker date="1571688867562" expanded="true" signature="21:2748" ph="{...}" />
+                <marker date="1571688867562" expanded="true" signature="42:100" ph="{...}" />
+                <marker date="1571688867562" expanded="true" signature="119:2746" ph="{...}" />
+                <marker date="1571688867562" expanded="true" signature="198:2740" ph="{...}" />
+                <marker date="1571688867562" expanded="true" signature="221:2725" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/Scripts/CubemapToSphericalHarmonic.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="178">
+              <caret line="106" column="12" selection-start-line="106" selection-start-column="12" selection-end-line="106" selection-end-column="12" />
+              <folding>
+                <marker date="1571346434095" expanded="false" signature="6:57" ph="..." />
+                <marker date="1571346434095" expanded="true" signature="136:2931" ph="{...}" />
+                <marker date="1571346434095" expanded="true" signature="483:645" ph="{...}" />
+                <marker date="1571346434095" expanded="true" signature="663:1246" ph="{...}" />
+                <marker date="1571346434095" expanded="true" signature="694:1009" ph="{...}" />
+                <marker date="1571346434095" expanded="true" signature="1122:1190" ph="{...}" />
+                <marker date="1571346434095" expanded="true" signature="1269:1819" ph="{...}" />
+                <marker date="1571346434095" expanded="true" signature="1299:1600" ph="{...}" />
+                <marker date="1571346434095" expanded="true" signature="1526:1590" ph="{...}" />
+                <marker date="1571346434095" expanded="true" signature="1613:1813" ph="{...}" />
+                <marker date="1571346434095" expanded="true" signature="1849:1949" ph="{...}" />
+                <marker date="1571346434095" expanded="true" signature="1894:1943" ph="{...}" />
+                <marker date="1571346434095" expanded="true" signature="1997:2929" ph="{...}" />
+                <marker date="1571346434095" expanded="true" signature="2177:2357" ph="{...}" />
+                <marker date="1571346434095" expanded="true" signature="2393:2676" ph="{...}" />
+                <marker date="1571346434095" expanded="true" signature="2530:2598" ph="{...}" />
+                <marker date="1571346434095" expanded="true" signature="2751:2832" ph="{...}" />
+                <marker date="1571346434095" expanded="true" signature="2871:2923" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/Scripts/CubemapToSphericalHarmonic.compute">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="654">
+              <caret line="131" column="28" selection-start-line="131" selection-start-column="28" selection-end-line="131" selection-end-column="39" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>_Color</find>
+      <find>SH_3_Order</find>
+      <find>half</find>
+      <find>s_fSqrtPI</find>
+      <find>c</find>
+      <find>;</find>
+      <find>specular</find>
+      <find>Evaluate_SH_2</find>
+      <find>SH_2_r</find>
+      <find>SampleColor</find>
+      <find>nl</find>
+      <find>Evaluate_SH_0_1</find>
+      <find>_Shininess</find>
+      <find>_N</find>
+      <find>fC4</find>
+      <find>_N0</find>
+      <find>sqrt</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>_BaseColor</replace>
+      <replace />
+      <replace>_cosTheta</replace>
+      <replace>cosTheta</replace>
+      <replace>sqrtPi</replace>
+    </replaceStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Shaders/SH.shader" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Shaders/Specular.shader" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/E3232360-D51C-46C7-86DD-547E2F0B3F8B/a1/553ae3fd/ComputeShader.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/CubemapToSphericalHarmonic.compute" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/CubemapToSphericalHarmonic.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Shaders/Unlit.shader" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/E3232360-D51C-46C7-86DD-547E2F0B3F8B/00/c8848f31/ComputeBuffer.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Shaders/Cubemap.shader" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Shaders/Diffuse.shader" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Shaders/Diffuse+Ambient.shader" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/Assets/Shaders/Unlit.shader" />
+        <option value="$PROJECT_DIR$/Assets/Shaders/Diffuse.shader" />
+        <option value="$PROJECT_DIR$/Assets/Shaders/Diffuse+Ambient.shader" />
+        <option value="$PROJECT_DIR$/Assets/Shaders/Specular.shader" />
+        <option value="$PROJECT_DIR$/Assets/Shaders/CubemapToSphericalHarmonic.cs" />
+        <option value="$PROJECT_DIR$/Assets/Shaders/CubemapToSphericalHarmonic.compute" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/CubemapToSphericalHarmonic.cs" />
+        <option value="$PROJECT_DIR$/Assets/Shaders/Cubemap.shader" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/CubemapToSphericalHarmonic.compute" />
+        <option value="$PROJECT_DIR$/Assets/Shaders/SH.shader" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectConfigurationFiles">
+    <option name="files">
+      <list>
+        <option value="$PROJECT_DIR$/.idea/.idea.Lecture4/.idea/indexLayout.xml" />
+        <option value="$PROJECT_DIR$/.idea/.idea.Lecture4/.idea/vcs.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="332" />
+    <option name="y" value="-11" />
+    <option name="width" value="1400" />
+    <option name="height" value="1000" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator currentView="UnityExplorer" proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="SolutionExplorer">
+        <option name="show-all-files" value="false" />
+      </pane>
+      <pane id="UnityExplorer">
+        <option name="show-hidden-items" value="false" />
+        <option name="show-project-names" value="true" />
+      </pane>
+      <pane id="FileSystemExplorer" />
+      <pane id="AssemblyExplorer" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="Discover.Launch.Via.Unity" value="true" />
+    <property name="Rider.DefaultBreakpoints.AreToggled" value="true" />
+    <property name="Rider.ProjectViewActivator.IsNotFirstRun" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+    <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <option name="userSelectedPid" value="false" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" pid="3560">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" value="3560" />
+      <option name="userSelectedPid" value="false" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="9529ee47-ddf7-42cf-bf83-cb621d4ba29b" name="Default Changelist" comment="" />
+      <created>1570042746031</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1570042746031</updated>
+      <workItem from="1570042751710" duration="53733000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="53733000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Favorites" side_tool="true" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24986681" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="NuGet" />
+      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Unity" />
+      <window_info anchor="bottom" id="Database Changes" />
+      <window_info anchor="bottom" id="Version Control" />
+      <window_info anchor="bottom" id="Unit Tests" />
+      <window_info anchor="bottom" id="Terminal" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.27534685" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="right" id="Errors In Solution" />
+      <window_info anchor="right" id="Database" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" suspend="NONE" type="DotNet Exception Breakpoints">
+          <properties exception="System.Threading.ThreadAbortException" displayValue="System.Threading.ThreadAbortException" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="UNITY_DEBUG_RUN_CONFIGURATION">
+        <watch expression="_name" language="C#" custom="RiderImportsList:" />
+        <watch expression="sum/SIZE" language="C#" custom="RiderImportsList:" />
+      </configuration>
+    </watches-manager>
+  </component>
+  <component name="debuggerHistoryManager">
+    <expressions id="watch">
+      <expression>
+        <expression-string>sum/SIZE</expression-string>
+        <language-id>C#</language-id>
+        <custom-info>RiderImportsList:</custom-info>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>_destination[0]</expression-string>
+        <language-id>C#</language-id>
+        <custom-info>RiderImportsList:</custom-info>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>_name</expression-string>
+        <language-id>C#</language-id>
+        <custom-info>RiderImportsList:</custom-info>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+    </expressions>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/E3232360-D51C-46C7-86DD-547E2F0B3F8B/00/c8848f31/ComputeBuffer.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="46" column="11" selection-start-line="46" selection-start-column="11" selection-end-line="46" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/E3232360-D51C-46C7-86DD-547E2F0B3F8B/a1/553ae3fd/ComputeShader.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="338" column="16" selection-start-line="338" selection-start-column="16" selection-end-line="338" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Shaders/Diffuse.shader">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="31" selection-start-line="31" selection-end-line="31" />
+          <folding>
+            <marker date="1570050707453" expanded="true" signature="26:1240" ph="{...}" />
+            <marker date="1570050707453" expanded="true" signature="47:105" ph="{...}" />
+            <marker date="1570050707453" expanded="true" signature="124:1238" ph="{...}" />
+            <marker date="1570050707453" expanded="true" signature="203:1232" ph="{...}" />
+            <marker date="1570050707453" expanded="true" signature="226:1217" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Shaders/Unlit.shader">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
+          <folding>
+            <marker date="1570044818391" expanded="true" signature="24:867" ph="{...}" />
+            <marker date="1570044818391" expanded="true" signature="45:103" ph="{...}" />
+            <marker date="1570044818391" expanded="true" signature="122:865" ph="{...}" />
+            <marker date="1570044818391" expanded="true" signature="201:859" ph="{...}" />
+            <marker date="1570044818391" expanded="true" signature="224:844" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Shaders/Diffuse+Ambient.shader">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="735">
+          <caret line="49" column="57" selection-start-line="49" selection-start-column="57" selection-end-line="49" selection-end-column="57" />
+          <folding>
+            <marker date="1570050742381" expanded="true" signature="34:1366" ph="{...}" />
+            <marker date="1570050742381" expanded="true" signature="55:175" ph="{...}" />
+            <marker date="1570050742381" expanded="true" signature="194:1364" ph="{...}" />
+            <marker date="1570050742381" expanded="true" signature="273:1358" ph="{...}" />
+            <marker date="1570050742381" expanded="true" signature="296:1343" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Shaders/Specular.shader">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="870">
+          <caret line="58" column="91" selection-start-line="58" selection-start-column="91" selection-end-line="58" selection-end-column="91" />
+          <folding>
+            <marker date="1570050774470" expanded="true" signature="27:1873" ph="{...}" />
+            <marker date="1570050774470" expanded="true" signature="48:212" ph="{...}" />
+            <marker date="1570050774470" expanded="true" signature="231:1871" ph="{...}" />
+            <marker date="1570050774470" expanded="true" signature="310:1865" ph="{...}" />
+            <marker date="1570050774470" expanded="true" signature="333:1850" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Shaders/CubemapToSphericalHarmonic.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1019">
+          <caret column="13" selection-start-column="13" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Shaders/CubemapToSphericalHarmonic.compute">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="309">
+          <caret line="100" column="20" selection-start-line="100" selection-start-column="20" selection-end-line="100" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Shaders/Cubemap.shader">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-81">
+          <caret line="84" column="16" selection-start-line="84" selection-start-column="16" selection-end-line="84" selection-end-column="16" />
+          <folding>
+            <marker date="1571431762477" expanded="true" signature="26:3884" ph="{...}" />
+            <marker date="1571431762477" expanded="true" signature="47:248" ph="{...}" />
+            <marker date="1571431762477" expanded="true" signature="267:3882" ph="{...}" />
+            <marker date="1571431762477" expanded="true" signature="346:3876" ph="{...}" />
+            <marker date="1571431762477" expanded="true" signature="369:3861" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/CubemapToSphericalHarmonic.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="178">
+          <caret line="106" column="12" selection-start-line="106" selection-start-column="12" selection-end-line="106" selection-end-column="12" />
+          <folding>
+            <marker date="1571346434095" expanded="false" signature="6:57" ph="..." />
+            <marker date="1571346434095" expanded="true" signature="136:2931" ph="{...}" />
+            <marker date="1571346434095" expanded="true" signature="483:645" ph="{...}" />
+            <marker date="1571346434095" expanded="true" signature="663:1246" ph="{...}" />
+            <marker date="1571346434095" expanded="true" signature="694:1009" ph="{...}" />
+            <marker date="1571346434095" expanded="true" signature="1122:1190" ph="{...}" />
+            <marker date="1571346434095" expanded="true" signature="1269:1819" ph="{...}" />
+            <marker date="1571346434095" expanded="true" signature="1299:1600" ph="{...}" />
+            <marker date="1571346434095" expanded="true" signature="1526:1590" ph="{...}" />
+            <marker date="1571346434095" expanded="true" signature="1613:1813" ph="{...}" />
+            <marker date="1571346434095" expanded="true" signature="1849:1949" ph="{...}" />
+            <marker date="1571346434095" expanded="true" signature="1894:1943" ph="{...}" />
+            <marker date="1571346434095" expanded="true" signature="1997:2929" ph="{...}" />
+            <marker date="1571346434095" expanded="true" signature="2177:2357" ph="{...}" />
+            <marker date="1571346434095" expanded="true" signature="2393:2676" ph="{...}" />
+            <marker date="1571346434095" expanded="true" signature="2530:2598" ph="{...}" />
+            <marker date="1571346434095" expanded="true" signature="2751:2832" ph="{...}" />
+            <marker date="1571346434095" expanded="true" signature="2871:2923" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/CubemapToSphericalHarmonic.compute">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="654">
+          <caret line="131" column="28" selection-start-line="131" selection-start-column="28" selection-end-line="131" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Shaders/SH.shader">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="72" column="41" selection-start-line="72" selection-start-column="41" selection-end-line="72" selection-end-column="41" />
+          <folding>
+            <marker date="1571688867562" expanded="true" signature="21:2748" ph="{...}" />
+            <marker date="1571688867562" expanded="true" signature="42:100" ph="{...}" />
+            <marker date="1571688867562" expanded="true" signature="119:2746" ph="{...}" />
+            <marker date="1571688867562" expanded="true" signature="198:2740" ph="{...}" />
+            <marker date="1571688867562" expanded="true" signature="221:2725" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
