@@ -1,0 +1,81 @@
+﻿// Each #kernel tells which function to compile; you can have many kernels
+#pragma kernel ComputeHarmonics
+
+#define PI            3.14159265359f
+#define TWO_PI        6.28318530718f
+#define FOUR_PI       12.56637061436f
+#define INV_PI        0.31830988618f
+#define INV_TWO_PI    0.15915494309f
+#define INV_FOUR_PI   0.07957747155f
+#define HALF_PI       1.57079632679f
+#define INV_HALF_PI   0.636619772367f
+
+RWStructuredBuffer<float4> SH_0_1_r;
+RWStructuredBuffer<float4> SH_0_1_g;
+RWStructuredBuffer<float4> SH_0_1_b;
+
+RWStructuredBuffer<float4> SH_2_r;
+RWStructuredBuffer<float4> SH_2_g;
+RWStructuredBuffer<float4> SH_2_b;
+
+RWStructuredBuffer<float4> SH_2_rgb;
+
+TextureCube<half4> _Env;
+SamplerState samplerLinearRepeat;
+
+uint Hash(uint s)
+{
+    s ^= 2747636419u;
+    s *= 2654435769u;
+    s ^= s >> 16;
+    s *= 2654435769u;
+    s ^= s >> 16;
+    s *= 2654435769u;
+    return s;
+}
+
+float Random(uint seed)
+{
+    return float(Hash(seed)) / 4294967295.0; // 2^32-1
+}
+
+float3 SampleColor(float3 direction)
+{   
+    float4 tex = _Env.SampleLevel(samplerLinearRepeat, direction, 0);
+    return tex.rgb;
+}
+
+[numthreads(1024, 1, 1)]
+void ComputeHarmonics(uint id : SV_DispatchThreadID)
+{
+    const int THREADS = 1024;
+    const int SAMPLES = 100;
+    
+    // See SH.shader for more details
+    float4 results[7] = {
+        float4(0, 0, 0, 0), // SH_0_1_r
+        float4(0, 0, 0, 0), // SH_0_1_g
+        float4(0, 0, 0, 0), // SH_0_1_b
+        
+        float4(0, 0, 0, 0), // SH_2_r
+        float4(0, 0, 0, 0), // SH_2_g
+        float4(0, 0, 0, 0), // SH_2_b
+        
+        float4(0, 0, 0, 0), // SH_2_rgb
+    };
+    
+    // Populate results buffer using monte-carlo method.
+    // You can see the Random(i) function. Use it just as with the previous task.
+    
+    // TASK: project light from _Env to spherical harmonic coefficients and store them in results[]
+    
+    SH_0_1_r[id] = results[0];
+    SH_0_1_g[id] = results[1];
+    SH_0_1_b[id] = results[2];
+    
+    SH_2_r[id] = results[3];
+    SH_2_g[id] = results[4];
+    SH_2_b[id] = results[5];    
+    
+    SH_2_rgb[id] = results[6];
+}
