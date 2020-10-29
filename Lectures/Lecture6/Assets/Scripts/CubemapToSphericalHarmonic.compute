@@ -1,4 +1,5 @@
-﻿#pragma kernel ComputeHarmonics
+﻿﻿// Each #kernel tells which function to compile; you can have many kernels
+#pragma kernel ComputeHarmonics
 
 #define PI            3.14159265359f
 #define TWO_PI        6.28318530718f
@@ -44,27 +45,6 @@ float3 SampleColor(float3 direction)
     return tex.rgb;
 }
 
-float4 Evaluate_SH_0_1(float3 normal)
-{
-    float3 c = normal.xyz * 3.0f / 4.0f / PI;
-    return float4(
-        c,
-        1.0f / 4.0f / PI
-    );
-}
-
-float4 Evaluate_SH_2(float3 normal)
-{
-    float4 vB = normal.xyzz * normal.yzxz;
-    float3 c = vB.xyz * 15 / 4 / PI;
-    return float4(
-         c.x,
-         c.y,
-         c.z,
-        (3.f * vB.w - 1.f) * 5 / 16.0f / PI
-    );
-}
-
 [numthreads(1024, 1, 1)]
 void ComputeHarmonics(uint id : SV_DispatchThreadID)
 {
@@ -84,67 +64,10 @@ void ComputeHarmonics(uint id : SV_DispatchThreadID)
         float4(0, 0, 0, 0), // SH_2_rgb
     };
     
+    // Populate results buffer using monte-carlo method.
+    // You can see the Random(i) function. Use it just as with the previous task.
+    
     // TASK: project light from _Env to spherical harmonic coefficients and store them in results[]
-    for (int i = 0; i < SAMPLES; i++)
-    {
-        uint seed = THREADS * id + i;
-        float u = Random(2 * seed);
-        float v = Random(2 * seed + 1);
-        float phi = u * TWO_PI;
-        float cosTheta = 2 * v - 1;
-        float sinTheta = sqrt(1 - cosTheta * cosTheta);
-        
-        float3 sampleDir = float3(
-            cos(phi) * sinTheta,
-            sin(phi) * sinTheta,
-            cosTheta
-        );
-    
-        float3 sample = SampleColor(sampleDir);
-        
-        float4 sh_0_1 = Evaluate_SH_0_1(sampleDir);
-        sh_0_1.w *= PI;
-        sh_0_1.xyz *= 2 * PI / 3;
-        for (int c = 0; c < 3; c++)
-        {
-            results[c] += sample[c] * sh_0_1;
-        }
-        
-        float4 sh_2 = Evaluate_SH_2(sampleDir);
-        sh_2 *= PI / 4;
-        
-        for (c = 0; c < 3; c++)
-        {
-            results[3 + c] += sample[c] * sh_2;
-        }
-        
-        results[6].rgb += sample * 15 / 16 / PI * (sampleDir.x*sampleDir.x - sampleDir.y*sampleDir.y);
-        results[6].rgb *= PI / 4;
-    }
-    
-    for (i = 0; i < 7; i++)
-    {
-        results[i] = results[i] * 4 / SAMPLES;
-    }
-    
-    //for (int c = 0; c < 3; c++)
-    //{
-    //    // Precomputing coefficients of max(0, cos(theta) for L=0
-    //    results[c].w *= PI; 
-    //    // Precomputing coefficients of max(0, cos(theta) for L=1
-    //    results[c].xyz *= PI * 2 / 3;
-    //}
-    //
-    //for (c = 0; c < 4; c++)
-    //{
-    //    // Precomputing coefficients of max(0, cos(theta) for L=2
-    //    results[3 + c] *= PI / 4;
-    //} 
-    
-    //for (int c = 0; c < 7; c++) 
-    //{
-    //    results[c] *= PI * 4;
-    //}
     
     SH_0_1_r[id] = results[0];
     SH_0_1_g[id] = results[1];
@@ -154,5 +77,5 @@ void ComputeHarmonics(uint id : SV_DispatchThreadID)
     SH_2_g[id] = results[4];
     SH_2_b[id] = results[5];    
     
-    SH_2_rgb[id] = results[6];    
+    SH_2_rgb[id] = results[6];
 }
