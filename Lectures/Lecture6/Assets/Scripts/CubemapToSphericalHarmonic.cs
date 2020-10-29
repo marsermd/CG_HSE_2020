@@ -79,9 +79,9 @@ public class CubemapToSphericalHarmonic : MonoBehaviour
             {"SH_0_1_r", new float4(0.0036f, 0.0526f, -0.0017f, 0.2530f)},
             {"SH_0_1_g", new float4(0.0016f, 0.1011f,  0.0048f, 0.3180f)},
             {"SH_0_1_b", new float4(0.0020f, 0.2076f,  0.0093f, 0.3641f)},
-            {"SH_2_r"  , new float4(0.0024f, 0.0501f, -0.0076f, 0.0021f)},
-            {"SH_2_g"  , new float4(0.0025f, 0.0519f, -0.0046f, 0.0041f)},
-            {"SH_2_b"  , new float4(0.0031f, 0.0584f, -0.0035f, 0.0034f)},
+            {"SH_2_r"  , new float4(0.0024f, 0.0501f, -0.0076f, 0.0042f)},
+            {"SH_2_g"  , new float4(0.0025f, 0.0519f, -0.0046f, 0.0082f)},
+            {"SH_2_b"  , new float4(0.0031f, 0.0584f, -0.0035f, 0.0068f)},
             {"SH_2_rgb", new float4(0.0001f, 0.0002f,  0.0001f, 0.0000f)},
         };
 
@@ -92,7 +92,7 @@ public class CubemapToSphericalHarmonic : MonoBehaviour
             float4 correct = correctValues[bufferSetup.Name];
             for (int i = 0; i < 4; i++)
             {
-                if (Mathf.Abs(current[i] - correct[i]) > 0.004f)
+                if (Mathf.Abs(current[i] - correct[i]) > 0.008f)
                 {
                     Debug.LogError($"Difference in {current:F4} and {correct:F4} in position {i}");
                     foundDifference = true;
