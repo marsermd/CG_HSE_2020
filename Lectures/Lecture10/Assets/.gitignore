@@ -1,0 +1,3 @@
+//Excluede huge files
+*.hdr
+*.hdr.meta

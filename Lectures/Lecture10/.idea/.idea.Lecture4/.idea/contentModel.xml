@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\misch\.Rider2019.1\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\misch\.Rider2019.1\system\resharper-host\local\Transient\ReSharperHost\v191\SolutionCaches\_Lecture4.1544081799.00" t="ExcludeRecursive" />
+    <e p="C:\Users\misch\ForGit\CG\Lectures\Lecture4" t="IncludeRecursive">
+      <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
+      <e p="Assets" t="Include">
+        <e p="Scripts" t="Include">
+          <e p="CubemapToSphericalHarmonic.compute" t="Include" />
+          <e p="CubemapToSphericalHarmonic.cs" t="Include" />
+        </e>
+        <e p="Shaders" t="Include">
+          <e p="Cubemap.shader" t="Include" />
+          <e p="Diffuse+Ambient.shader" t="Include" />
+          <e p="Diffuse.shader" t="Include" />
+          <e p="SH.shader" t="Include" />
+          <e p="Specular.shader" t="Include" />
+          <e p="Unlit.shader" t="Include" />
+        </e>
+      </e>
+      <e p="Lecture4.sln" t="IncludeFlat" />
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="Packages" t="ExcludeRecursive" />
+      <e p="Temp\bin" t="ExcludeRecursive" />
+    </e>
+  </component>
+</project>
