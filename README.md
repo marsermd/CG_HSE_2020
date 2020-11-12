@@ -6,3 +6,5 @@ Tasks and lectures for CG course
 - [Assignment 3, "Triplanar Shading"](./Lectures/Lecture5). _**due: 07.10.2020, 23:59**_
 - [Assignment 4, "Monte-Carlo"](./Lectures/Lecture6). _**due: 21.10.2020, 23:59**_
 - [Assignment 5, "Spherical Harmonics"](./Lectures/Lecture7). _**due: 28.10.2020, 23:59**_
+- [Assignment 6, "Parallax Occlusion Mapping"](./Lectures/Lecture10). _**due: 19.11.2020, 23:59**_
+
