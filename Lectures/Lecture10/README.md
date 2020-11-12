@@ -8,12 +8,12 @@
 5. Send me your code at mischapanin@gmail.com along with all of your screenshots (at minimum 3).
 6. The e-mail should have the following topic: __HSE.CG.<your_name>.<your_last_name>.HW6__
 
-**Bonus points:** 
-+10% for soft self-shadowing
-+10% for correct Per-Pixel Depth Offset
-+50% for cone mapping (generate it from the depth map)
+**Bonus points:**   
++10% for soft self-shadowing  
++10% for correct Per-Pixel Depth Offset  
++50% for cone mapping (generate it from the depth map)  
 
-**hint**
+**Hint**  
 If you want to spice it up and get a nice animation, generate the height map proceduraly.
 
 [Initial Setup](./Nothing.png)  
